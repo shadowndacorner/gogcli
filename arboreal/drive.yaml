@@ -1,0 +1,10 @@
+name: arboreal-drive
+description: Drive and account setup only; no updater, generic API, MCP, or unrelated services.
+allow:
+  - version
+  - schema
+  - drive
+  - auth
+  - config
+deny:
+  - auth.tokens.export

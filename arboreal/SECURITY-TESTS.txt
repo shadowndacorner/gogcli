@@ -1,0 +1,5 @@
+ok  	github.com/openclaw/gogcli/internal/googleauth	0.025s
+ok  	github.com/openclaw/gogcli/internal/secrets	0.302s
+ok  	github.com/openclaw/gogcli/internal/googleapi	0.115s
+ok  	github.com/openclaw/gogcli/internal/config	0.008s
+ok  	github.com/openclaw/gogcli/internal/cmd	16.129s
