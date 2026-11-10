@@ -1,0 +1,9 @@
+Allowed, stopped before OAuth: calendar list
+Allowed, stopped before OAuth: gmail search test
+Allowed, stopped before OAuth: drive ls
+Allowed, stopped before OAuth: docs info test-document
+Allowed, stopped before OAuth: sheets metadata test-sheet
+Allowed, stopped before OAuth: contacts list
+Blocked: update status
+Blocked: auth tokens export test@example.invalid
+Blocked: tasks lists

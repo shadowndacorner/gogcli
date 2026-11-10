@@ -1,4 +1,4 @@
-# Arboreal pinned Drive build
+# Arboreal pinned personal Google build
 
 Fork: https://github.com/shadowndacorner/gogcli
 
@@ -19,13 +19,13 @@ The first command downloads the checksum-verified compiler. The second uses vend
 
 Output: `bin/gog-drive`. Builds use CGO disabled, fixed platform, trimmed paths, no VCS stamping or build ID, and fixed version metadata. Two builds on the preparation host produced the same SHA-256:
 
-`b2f214448290451a9ea10d42f5c27616a8a5fbb50ac592f6664a03d5f4c75bcd`
+`45fb623b6b84e14142cdc875d67247955f647dead5d91a0fa5327db282a3b0eb`
 
 This demonstrates repeatability on one host, not independent reproducibility across toolchains or hosts. Verify the source commit and compiler too; a checksum manifest is not a signature and can be changed by a repository writer.
 
 ## Command policy
 
-`drive.yaml` is compiled into the binary using upstream's safety-profile mechanism. It allows Drive, authentication, configuration, schema, and version commands. It denies token export. Unlisted service commands, generic API, MCP, and update-status commands are denied. It is not an OS sandbox, endpoint firewall, or removal of all unrelated code from the binary. OAuth scopes still control account permissions; use Drive-only read-only grants unless writes are needed. Multi-account aliases remain supported.
+`drive.yaml` is compiled into the binary using upstream's safety-profile mechanism. It allows Gmail, Calendar, Drive, Docs, Sheets, Contacts, authentication, configuration, schema, and version commands. It denies token export. Unlisted service commands, generic API, MCP, and update-status commands are denied. It is not an OS sandbox, endpoint firewall, or removal of all unrelated code from the binary. OAuth scopes still control account permissions; preserve existing grants when reauthorizing. The owner has already authorized all six services. Multi-account aliases remain supported.
 
 ## Review status
 

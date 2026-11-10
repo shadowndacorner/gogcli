@@ -32,3 +32,7 @@ For stronger assurance, review all reachable Drive/auth code and their dependenc
 The focused upstream OAuth/state/token/keyring/redirect/credential/read-only/baked-policy tests passed in all five selected packages (googleauth, secrets, googleapi, config, cmd). The first sandboxed attempt could not bind localhost; the successful rerun used permission to run synthetic local servers. Full upstream CI was not run. SECURITY-TESTS.txt contains the successful package results.
 
 The deployment launcher rejects nonempty API/discovery endpoint override environment variables and explicitly empty file-keyring passwords. These guards were smoke-tested. They are convenience controls, not a firewall: direct execution of the binary, process environment/trust-root changes, and code replacement remain possible for the same OS user.
+
+## Six-service policy correction
+
+The owner authorized Gmail, Calendar, Drive, Docs, Sheets, and Contacts. The baked policy now permits those six services; dependencies are unchanged. The previous bounded Drive/auth review does not constitute a full audit of the newly enabled service handlers. Policy regression checks cover entry into all six services using an empty temporary credential store, plus rejection of update-status, token export, and Tasks. No real credentials or account data were accessed.

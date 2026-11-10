@@ -14,6 +14,6 @@ generated=internal/cmd/safety_profile_baked_gen.go
 trap 'rm -f "$generated"' EXIT
 go run ./cmd/bake-safety-profile arboreal/drive.yaml "$generated"
 go build -trimpath -buildvcs=false -tags safety_profile \
-  -ldflags='-buildid= -X github.com/openclaw/gogcli/internal/cmd.version=v0.48.0-arboreal-drive -X github.com/openclaw/gogcli/internal/cmd.commit=f939ed37151af5b789ac08b98339fe8ddf880b09' \
+  -ldflags='-buildid= -X github.com/openclaw/gogcli/internal/cmd.version=v0.48.0-arboreal-personal-google -X github.com/openclaw/gogcli/internal/cmd.commit=f939ed37151af5b789ac08b98339fe8ddf880b09' \
   -o bin/gog-drive ./cmd/gog
 sha256sum bin/gog-drive

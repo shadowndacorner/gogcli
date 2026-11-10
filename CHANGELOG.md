@@ -2,6 +2,8 @@
 
 ## Unreleased — Arboreal fork
 
+- Allow the six authorized personal Google services: Gmail, Calendar, Drive, Docs, Sheets, and Contacts. Retain token-export and unrelated-service restrictions.
+
 - Add a pinned, vendored Drive-only build with compiler checksum, build instructions, and security review evidence.
 
 ## 0.48.0 - 2026-11-05
